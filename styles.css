@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Quote Box */
+.quote-box {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Toggle - Improved */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.toggle-label {
+    font-size: 1rem;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background: #007bff;
+}
+
+input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .quote-box {
+    background: #444;
+    border-left: 5px solid #ffcc00;
+}
+
+.dark-mode .slider {
+    background: #ffcc00;
+}
+
+.dark-mode .slider::before {
+    background: black;
+}
+
+/* Saved Quotes */
+#saved-quotes {
+    list-style: none;
+    padding: 0;
+}
+
+#saved-quotes li {
+    padding: 10px;
+    margin-top: 5px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#saved-quotes button {
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
